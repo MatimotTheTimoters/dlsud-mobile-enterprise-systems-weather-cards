@@ -8,390 +8,422 @@
     android:background="#ccddff"
     tools:context=".MainActivity">
 
-
-    <GridLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:columnCount="1"
-        android:rowCount="4">
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
 
-        <!--Manila Card-->
-        <androidx.cardview.widget.CardView
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="20dp">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:rowCount="4">
 
-            <!--Background Layout-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+            <!--Manila Card-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
 
-                <!--Text Layout (left side)-->
+                <!--Background Layout-->
                 <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Manila"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="40sp"
-                        android:text="Current Location" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10:00 AM" />
-                </LinearLayout>
-
-                <!--Icon and Temperature Layout (right side)-->
-                <LinearLayout
-                    android:layout_width="220dp"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="30dp"
-                        android:src="@drawable/weather" />
-
-                    <!--Temperature-->
+                    <!--Text Layout (left side)-->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
-                        android:orientation="vertical">
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/tvLocationManila"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="28°"
-                                android:textSize="39sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="bottom"
-                                android:text="C"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
+                            android:layout_height="wrap_content"
+                            android:text="Manila"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="RealFeel 35°C" />
+                            android:layout_marginBottom="40sp"
+                            android:text="Current Location" />
+
+                        <TextView
+                            android:id="@+id/tvManilaTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:00 AM" />
+                    </LinearLayout>
+
+                    <!--Icon and Temperature Layout (right side)-->
+                    <LinearLayout
+                        android:layout_width="220dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="30dp"
+                            android:src="@drawable/weather" />
+
+                        <!--Temperature-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvManilaTemp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="28°"
+                                    android:textSize="39sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:text="C"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/tvManilaRFTemp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RealFeel 35°C" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <!--Dasma Card-->
-        <androidx.cardview.widget.CardView
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="20dp">
+            <!--Dasma Card-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
 
-            <!--Background Layout-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <!--Text Layout (left side)-->
+                <!--Background Layout-->
                 <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dasmarinas, Cavite"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="40sp"
-                        android:text="Current Location" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10:00 AM" />
-                </LinearLayout>
-
-                <!--Icon and Temperature Layout (right side)-->
-                <LinearLayout
-                    android:layout_width="220dp"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="30dp"
-                        android:src="@drawable/weather" />
-
-                    <!--Temperature-->
+                    <!--Text Layout (left side)-->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
-                        android:orientation="vertical">
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/tvLocationDasma"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="28°"
-                                android:textSize="39sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="bottom"
-                                android:text="C"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
+                            android:layout_height="wrap_content"
+                            android:text="Dasmarinas, Cavite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="RealFeel 35°C" />
+                            android:layout_marginBottom="40sp"
+                            android:text="Current Location" />
+
+                        <TextView
+                            android:id="@+id/tvDasmaTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:00 AM" />
+                    </LinearLayout>
+
+                    <!--Icon and Temperature Layout (right side)-->
+                    <LinearLayout
+                        android:layout_width="220dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="30dp"
+                            android:src="@drawable/weather" />
+
+                        <!--Temperature-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvDasmaTemp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="28°"
+                                    android:textSize="39sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:text="C"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/tvDasmaRFTemp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RealFeel 35°C" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <!--Cebu Card-->
-        <androidx.cardview.widget.CardView
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-            android:layout_row="2"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="20dp">
+            <!--Cebu Card-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
 
-            <!--Background Layout-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <!--Text Layout (left side)-->
+                <!--Background Layout-->
                 <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Cebu"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="40sp"
-                        android:text="Current Location" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10:00 AM" />
-                </LinearLayout>
-
-                <!--Icon and Temperature Layout (right side)-->
-                <LinearLayout
-                    android:layout_width="220dp"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="30dp"
-                        android:src="@drawable/weather" />
-
-                    <!--Temperature-->
+                    <!--Text Layout (left side)-->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
-                        android:orientation="vertical">
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/tvLocationCebu"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="28°"
-                                android:textSize="39sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="bottom"
-                                android:text="C"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
+                            android:layout_height="wrap_content"
+                            android:text="Cebu"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="RealFeel 35°C" />
+                            android:layout_marginBottom="40sp"
+                            android:text="Current Location" />
+
+                        <TextView
+                            android:id="@+id/tvCebuTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:00 AM" />
+                    </LinearLayout>
+
+                    <!--Icon and Temperature Layout (right side)-->
+                    <LinearLayout
+                        android:layout_width="220dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="30dp"
+                            android:src="@drawable/weather" />
+
+                        <!--Temperature-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvCebuTemp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="28°"
+                                    android:textSize="39sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:text="C"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/tvCebuRFTemp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RealFeel 35°C" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <!--Davao Card-->
-        <androidx.cardview.widget.CardView
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-            android:layout_row="3"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="20dp">
+            <!--Davao Card-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_row="3"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
 
-            <!--Background Layout-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <!--Text Layout (left side)-->
+                <!--Background Layout-->
                 <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Davao City"
-                        android:textSize="25sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="40sp"
-                        android:text="Current Location" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10:00 AM" />
-                </LinearLayout>
-
-                <!--Icon and Temperature Layout (right side)-->
-                <LinearLayout
-                    android:layout_width="220dp"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="30dp"
-                        android:src="@drawable/weather" />
-
-                    <!--Temperature-->
+                    <!--Text Layout (left side)-->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
-                        android:orientation="vertical">
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/tvLocationDavao"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="28°"
-                                android:textSize="39sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="bottom"
-                                android:text="C"
-                                android:textSize="20sp" />
-
-                        </LinearLayout>
-
+                            android:layout_height="wrap_content"
+                            android:text="Davao City"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="RealFeel 35°C" />
+                            android:layout_marginBottom="40sp"
+                            android:text="Current Location" />
+
+                        <TextView
+                            android:id="@+id/tvDavaoTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:00 AM" />
+                    </LinearLayout>
+
+                    <!--Icon and Temperature Layout (right side)-->
+                    <LinearLayout
+                        android:layout_width="220dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="30dp"
+                            android:src="@drawable/weather" />
+
+                        <!--Temperature-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvDavaoTemp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="28°"
+                                    android:textSize="39sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:text="C"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/tvDavaoRFTemp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RealFeel 35°C" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-    </GridLayout>
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:text="REFRESH"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>
