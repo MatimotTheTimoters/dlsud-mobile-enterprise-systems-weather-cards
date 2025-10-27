@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         // Bind views
         getViewIDs();
 
-        // Set click listeners for each card. When clicked, gather text values and start WeatherPopup with extras.
+        // Set click listeners for each card
         cvManila.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, WeatherPopup.class);
             intent.putExtra("city", tvLocationManila.getText().toString());

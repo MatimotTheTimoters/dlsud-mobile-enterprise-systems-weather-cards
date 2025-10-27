@@ -27,7 +27,7 @@ public class WeatherPopup extends AppCompatActivity {
             return insets;
         });
 
-        // Get and assign IDs from activity_weather_popup.xml
+        // Get and assign IDs
         tvCity   = findViewById(R.id.tvCity);
         tvDate   = findViewById(R.id.tvDate);
         tvTime   = findViewById(R.id.tvTime);
@@ -43,17 +43,14 @@ public class WeatherPopup extends AppCompatActivity {
         String temp = intent.getStringExtra("temp");
         String rfTemp = intent.getStringExtra("rfTemp");
 
-        // Optional: receive the original main layout view IDs (ints) if you passed them
-        // int sourceCityId = intent.getIntExtra("id_city", -1);
-
-        // Assign intent values to views (use safe defaults if extras are missing)
+        // Assign intent values to views
         tvCity.setText(city != null ? city : "[no city]");
         tvDate.setText(date != null ? date : "[no date]");
         tvTime.setText(time != null ? time : "[no time]");
         tvTemp.setText(temp != null ? temp : "[no temperature]");
         tvRFTemp.setText(rfTemp != null ? rfTemp : "[no realfeel]");
 
-        // RETURN button closes the popup (finishes activity)
+        // RETURN button closes the popup
         btnReturn.setOnClickListener(v -> finish());
     }
 }
