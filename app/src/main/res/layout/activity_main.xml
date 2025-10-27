@@ -414,15 +414,6 @@
 
         </GridLayout>
 
-        <Button
-            android:id="@+id/btnRefresh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/white"
-            android:text="REFRESH"
-            android:textColor="@color/black" />
-
     </LinearLayout>
 
 
